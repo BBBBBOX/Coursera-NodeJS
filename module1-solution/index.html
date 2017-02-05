@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Lunch Checker</title>
+    <script src="angular.min.js"></script>
+    <script src="app.js"></script>
+    <style>
+      .message { font-size: 1.3em; font-weight: bold;}
+    </style>
+  </head>
+  <body ng-app = "LunchCheck">
+    <div ng-controller = "LunchCheckController" >
+      <h1>Lunch Checker</h1>
+
+        <div>
+          <input type="text"
+            ng-model = "list"
+            placeholder="list comma separated dishes you usually have for lunch">
+            This program Doesn't consider empty item.
+        </div>
+
+        <div>
+          <button ng-click = "listChecker()">Check If Too Much</button>
+        </div>
+          {{message}}<div>
+
+        </div>
+    </div>
+  </body>
+</html>

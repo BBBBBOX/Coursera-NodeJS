@@ -1,0 +1,18 @@
+<div class="loader">
+</div>
+
+<h3 class="results">{{ctrl.results}}</h3>
+<div class="container">
+	<div class="row">
+		<div class="col-md-12">
+			<ul>
+				<li ng-repeat = "item in ctrl.items">
+					{{item.short_name}} Name: {{item.name}}
+					<br>Description: {{item.description}}
+					<button class="btn btn-danger" ng-click ="ctrl.onRemove({index: $index});">
+					Don't Want This One!</button>
+				</li>
+			</ul>
+		</div>
+	</div>
+</div>

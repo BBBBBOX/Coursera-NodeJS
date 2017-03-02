@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html ng-app='MenuApp'>
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="css/styles.css">
+    <title>Welcome to our Restaurant</title>
+  </head>
+  <body>
+    <h1>Welcome to our Restaurant</h1>
+
+    <ui-view></ui-view>
+
+    <!-- Libraries -->
+    <script src="lib/angular.min.js"></script>
+    <script src="lib/angular-ui-router.min.js"></script>
+
+    <!-- Modules -->
+    <script src="src/menu/menuapp.module.js"></script>
+    <script src="src/data/data.module.js"></script>
+
+    <!-- Routes -->
+    <script src="src/router.js"></script>
+
+    <!-- service -->
+    <script src="src/data/menudata.service.js"></script>
+    <!-- 'menuapp' module artifacts -->
+    <script src="src/menu/categories.component.js"></script>
+    <script src="src/menu/categories.controller.js"></script>
+    <script src="src/menu/items.component.js"></script>
+    <script src="src/menu/items.controller.js"></script>
+
+  </body>
+</html>

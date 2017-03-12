@@ -1,0 +1,22 @@
+<div class="container">
+  <h2 id="menu-categories-title" class="text-center"> User Information</h2>
+  <div class="text-center" ng-if="!infoc.user">
+    Not Signed up Yet. <a ui-sref="public.signup">Sign up Now!</a>
+  </div>
+
+  <div class="text-center" ng-if="infoc.user">
+    User name : {{infoc.user.firstName}} {{infoc.lastName}}<br/>
+    Email : {{infoc.user.email}}<br/>
+    Phone : {{infoc.user.phone}}<br/>
+    Favorite Item : {{infoc.user.item.name}} : {{infoc.user.item.description}}<br/>
+    <br/>
+  </div>
+
+  <div class="menu-item-photo" ng-if="infoc.user">
+    <div>
+      {{infoc.user.item.shortName}}
+    </div>
+    <img class = "img-responsive" ng-src="{{infoc.basePath}}/images/{{infoc.user.item.short_name}}.jpg"
+         alt="{{infoc.user.item.name}}" width = "250" height = "150">
+  </div>
+</div>
